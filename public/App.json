@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "name": "Introduction to C Programming",
+      "image": "https://ibb.co/X7GxsyY",
+      "credit": 1,
+      "price": 15000,
+      "details": "C programming is a powerful and widely used programming language known for its efficiency and low-level system access. It was developed in the early 1970s by Dennis Ritchie at Bell Labs.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 2,
+      "name": "Introduction to Algorithms",
+      "image": "https://ibb.co/RBQZPfm",
+      "credit": 2,
+      "price": 25000,
+      "details": "An algorithm is a step-by-step set of instructions for solving a particular problem or accomplishing a specific task.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 3,
+      "name": "Introduction to C++ for DSA",
+      "image": "https://ibb.co/ZgPwq9R",
+      "credit": 10,
+      "price": 10000,
+      "details": "An algorithm is a step-by-step set of instructions for solving a particular problem or accomplishing a specific task.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 4,
+      "name": "Basic Data Structures",
+      "image": "https://ibb.co/8nkMn7r",
+      "credit": 5,
+      "price": 35000,
+      "details": " Data structures are fundamental concepts in computer science that allow us to organize and store data in a way that facilitates efficient manipulation and retrieval.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 5,
+      "name": "Introduction to OOP Python",
+      "image": "https://ibb.co/sCqgtNk",
+      "credit": 5,
+      "price": 19000,
+      "details": "Object-Oriented Programming (OOP) is a programming paradigm that revolves around the concept of objects. It is a powerful way to organize code, making it more modular, reusable, and easier to maintain.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 6,
+      "name": "Software Engineering",
+      "image": "https://ibb.co/hYvPq6c",
+      "credit": 2,
+      "price": 23000,
+      "details": "Software engineering is a systematic approach to designing, coding, testing, and maintaining software applications.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 7,
+      "name": "AWS, Cloud Computing",
+      "image": "https://ibb.co/6PqkZgt",
+      "credit": 5,
+      "price": 35000,
+      "details": "Amazon Web Services (AWS) is a comprehensive cloud computing platform provided by Amazon. It offers services like computing power, storage options, networking capabilities, databases, machine learning, analytics, and more.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 8,
+      "name": "Database (MySQL)",
+      "image": "https://ibb.co/YhTtN6z",
+      "credit": 5,
+      "price": 19000,
+      "details": "MySQL is a popular open-source relational database management system (RDBMS) that is widely used for managing structured data.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    },
+    {
+      "id": 9,
+      "name": "Problem-Solving Part",
+      "image": "https://ibb.co/SRGRxWL",
+      "credit": 2,
+      "price": 23000,
+      "details": "Problem-solving is a critical skill in programming and any technical field. It involves the ability to analyze a problem, devise a strategy to solve it, and implement that strategy using code.",
+      "logodollar": "https://ibb.co/9qDjTnm",
+      "logobook": "https://ibb.co/WnmRQLK"
+    }
+  ]
