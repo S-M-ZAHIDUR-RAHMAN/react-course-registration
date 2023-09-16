@@ -4,9 +4,8 @@
 import React from 'react';
 
 const Cart = ({ courseName, remaining, totalCredit, totalPrice }) => {
-    // console.log(totalPrice);
     return (
-        <div className='cart-container bg-blue-200 rounded-lg shadow-lg'>
+        <div className='cart-container bg-blue-200 rounded-lg shadow-lg lg:sticky lg:top-3'>
             <div className='text-blue-700 text-lg font-bold mb-3 p-3'>
                 <h5 className='mt-2'>Credit Hour Remaining {remaining} hr</h5>
             </div>

@@ -15,7 +15,6 @@ const Main = () => {
             .then(res => res.json())
             .then(data => setDisplayCourses(data))
     }, []);
-    // console.log(displayCourses);
     const handleSelectCourse = (course) => {
         const isExist = courseName.find((item) => item.id == course.id);
 
@@ -29,13 +28,10 @@ const Main = () => {
                 creditHour += item.credit;
                 price += item.price;
             });
-            // console.log(creditHour);
             const totalRemaining = 20 - creditHour;
-            // console.log(totalRemaining);
 
             if (creditHour > 20) {
                 swal("YOU ARE NOT ALLOWED TO PURCHASE", "MORE THAN 20 CREDIT");
-                // creditHour -= item.credit;
             }
             else {
                 setTotalPrice(price);
@@ -48,12 +44,11 @@ const Main = () => {
             }
         }
     }
-    // console.log(courseName);
 
 
     return (
         <div className='container mx-auto mt-12 pb-20 '>
-            <div className='main-container flex justify-center gap-4 bg-pink-100'>
+            <div className='main-container flex justify-center gap-4'>
                 <div className="card-container w-[950px] flex flex-wrap gap-6">
                     {displayCourses.map((course) => (
                         <div key={course.id} className='card w-[300px] h-[400px] bg-white rounded-lg shadow-lg'>
