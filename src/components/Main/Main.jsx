@@ -3,6 +3,7 @@
 /* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
+import swal from 'sweetalert';
 const Main = () => {
     const [displayCourses, setDisplayCourses] = useState([]);
     const [courseName, setCourseName] = useState([]);
@@ -21,7 +22,7 @@ const Main = () => {
         let creditHour = course.credit;
         let price = course.price;
         if (isExist) {
-            return alert("already purchased");
+            swal("ALREADY PURCHASED");
         }
         else {
             courseName.forEach(item => {
@@ -33,7 +34,7 @@ const Main = () => {
             // console.log(totalRemaining);
 
             if (creditHour > 20) {
-                return alert("You are not allowed to book more than 20 credit.");
+                swal("YOU ARE NOT ALLOWED TO PURCHASE", "MORE THAN 20 CREDIT");
                 // creditHour -= item.credit;
             }
             else {
@@ -42,7 +43,7 @@ const Main = () => {
                 setRemaining(totalRemaining);
                 setCourseName([...courseName, course]);
                 if(totalRemaining === 0){
-                    return alert("This was your last purchase [Within 20 Credit hr limits].");
+                    swal("THIS WAS YOUR LAST PURCHASE", "[WITHIN 20 CREDIT HOUR LIMITS]");
                 }
             }
         }
@@ -81,7 +82,7 @@ const Main = () => {
                         </div>
                     ))}
                 </div>
-                <div className='cart w-[280px]'>
+                <div className='cart w-[340px]'>
                     <Cart courseName={courseName} remaining={remaining}
                         totalCredit={totalCredit} totalPrice={totalPrice} 
                     ></Cart>
