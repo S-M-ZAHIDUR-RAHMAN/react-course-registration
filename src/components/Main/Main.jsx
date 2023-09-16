@@ -8,6 +8,7 @@ const Main = () => {
     const [courseName, setCourseName] = useState([]);
     const [remaining, setRemaining] = useState(0);
     const [totalCredit, setTotalCredit] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
     useEffect(() => {
         fetch('../../../public/App.json')
             .then(res => res.json())
@@ -18,19 +19,32 @@ const Main = () => {
         const isExist = courseName.find((item) => item.id == course.id);
 
         let creditHour = course.credit;
+        let price = course.price;
         if (isExist) {
             return alert("already purchased");
         }
         else {
             courseName.forEach(item => {
                 creditHour += item.credit;
+                price += item.price;
             });
             // console.log(creditHour);
             const totalRemaining = 20 - creditHour;
             // console.log(totalRemaining);
-            setTotalCredit(creditHour);
-            setRemaining(totalRemaining);
-            setCourseName([...courseName, course]);
+
+            if (creditHour > 20) {
+                return alert("You are not allowed to book more than 20 credit.");
+                // creditHour -= item.credit;
+            }
+            else {
+                setTotalPrice(price);
+                setTotalCredit(creditHour);
+                setRemaining(totalRemaining);
+                setCourseName([...courseName, course]);
+                if(totalRemaining === 0){
+                    return alert("This was your last purchase [Within 20 Credit hr limits].");
+                }
+            }
         }
     }
     // console.log(courseName);
@@ -41,7 +55,7 @@ const Main = () => {
             <div className='main-container flex justify-center gap-4 bg-pink-100'>
                 <div className="card-container w-[950px] flex flex-wrap gap-6">
                     {displayCourses.map((course) => (
-                        <div key={course.id} className='card w-[300px] h-[400px] bg-white rounded-lg'>
+                        <div key={course.id} className='card w-[300px] h-[400px] bg-white rounded-lg shadow-lg'>
                             <div className='card-img flex justify-center'>
                                 <img className='w-[280px] mt-4' src=
                                     {course.image} alt="" />
@@ -69,7 +83,7 @@ const Main = () => {
                 </div>
                 <div className='cart w-[280px]'>
                     <Cart courseName={courseName} remaining={remaining}
-                        totalCredit={totalCredit}
+                        totalCredit={totalCredit} totalPrice={totalPrice} 
                     ></Cart>
                 </div>
             </div>
